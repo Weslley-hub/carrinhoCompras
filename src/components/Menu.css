@@ -1,0 +1,52 @@
+  .menu {
+    padding: 20px;
+  }
+  
+  .menu h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(33.33% - 10px);
+    margin-bottom: 20px;
+  }
+  
+  .card-content {
+    padding: 10px;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .card h3,
+  .card p {
+    margin: 0;
+  }
+  
+  .card button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card button:hover {
+    background-color: #0056b3;
+  }
