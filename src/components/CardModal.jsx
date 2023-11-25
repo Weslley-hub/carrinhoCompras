@@ -1,9 +1,12 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import Icon from '@mdi/react';
 import { mdiDelete } from '@mdi/js';
 import './CardModal.css';
 
 const CartModal = ({ carrinho, removerDoCarrinho, alterarQuantidade }) => {
+  
   const calcularTotal = (carrinhoItens) => {
     return carrinhoItens.reduce((total, item) => total + item.valor * item.quantidade, 0);
   };

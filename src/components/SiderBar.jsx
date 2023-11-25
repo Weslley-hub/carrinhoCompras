@@ -1,10 +1,21 @@
-import React from 'react';
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
+import React, { useState } from 'react';
 import './Siderbar.css';
 
 const Sidebar = ({ categorias, setCategoriaSelecionada }) => {
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleSiderbar = () => {
+    setIsOpen(!isOpen);
+  }
+
   return (
-    <aside className="sidebar">
-      <h2>Categorias</h2>
+    <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
+      <button onClick={toggleSiderbar} className="toggle-btn">
+        {isOpen ? '<' : '>'}
+      </button>
       <ul>
        {categorias.map((categoria, index) => (
           <li key={index}>
