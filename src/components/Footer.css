@@ -1,0 +1,19 @@
+.footer{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: small;
+  align-items: center;
+}
+
+.autores{
+  display: flex;
+  flex-direction: column;
+}
+
+.autor{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
