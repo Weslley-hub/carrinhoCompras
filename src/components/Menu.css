@@ -48,6 +48,26 @@
   padding: 10px;
 }
 
+.card-img {
+  position: relative;
+  width: 100%;
+  height: 200px; /* Altura desejada para o contêiner */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.imagem-produto {
+  width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
+  height: 100%; /* Garante que a imagem ocupe toda a altura do contêiner */
+  object-fit: fill; /* Preenche o contêiner, mas pode distorcer a imagem */
+  object-position: center center;
+  border-radius: 5px 5px 0 0;
+}
+
+
+
 .card img {
   width: 100%;
   height: auto;

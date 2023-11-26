@@ -14,7 +14,11 @@ const Menu = ({ categoriaSelecionada, menuData, adicionarAoCarrinho }) => {
           {produtosCategoria.map((produto, index) => (
             <div className="card" key={index}>
               <div className="card-content">
-                <img src={produto.imagem} alt={produto.nome} />
+                <div className="card-img">
+                  <img
+                    className="imagem-produto"
+                    src={produto.imagem} alt={produto.nome} />
+                </div>
                 <h3>{produto.nome}</h3>
                 <p>{produto.descricao}</p>
                 <p>R${produto.valor.toFixed(2)}</p>
