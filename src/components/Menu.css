@@ -1,8 +1,10 @@
 .menu-container {
-  max-height: 800px; 
   overflow-y: auto; 
   display: flex;
-  height: 100vh;
+}
+
+.menu{
+  margin-left: 6%;
 }
 
 .menu h2 {
