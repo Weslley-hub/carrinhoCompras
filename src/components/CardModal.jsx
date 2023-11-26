@@ -1,43 +1,49 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useState } from 'react';
 import Icon from '@mdi/react';
 import { mdiDelete } from '@mdi/js';
 import './CardModal.css';
+import ItemCarrinho from './ItemCarrinho';
 
 const CartModal = ({ carrinho, removerDoCarrinho, alterarQuantidade }) => {
-  
+  const [showMessage, setShowMessage] = useState(false);
+
   const calcularTotal = (carrinhoItens) => {
     return carrinhoItens.reduce((total, item) => total + item.valor * item.quantidade, 0);
   };
 
+  const handleFinalizarCompra = () => {
+    console.log("Finalizar Compra");
+    setShowMessage(true);
+    setTimeout(() => {
+      setShowMessage(false);
+    }, 4000); // Oculta a mensagem após 4 segundos
+  };
+
   return (
     <aside className="cart-sidebar">
+      {showMessage && <div className="message">Venda finalizada!</div>}
+
       <div className="cart-items">
         {carrinho.length === 0 ? (
           <p>O carrinho está vazio.</p>
         ) : (
-          <ul>
-            {carrinho.map((item) => (
-              <li key={item.id}>
-                <div className="item-info">
-                  <span>{item.nome}</span>
-                  <span>R$ {item.valor.toFixed(2)}</span>
-                </div>
-                <div className="item-controls">
-                  <button onClick={() => alterarQuantidade(item.id, item.quantidade - 1)}>-</button>
-                  <span>{item.quantidade}</span>
-                  <button onClick={() => alterarQuantidade(item.id, item.quantidade + 1)}>+</button>
-                  <button onClick={() => removerDoCarrinho(item.id)}><Icon path={mdiDelete} size={1} /></button>
-                </div>
-              </li>
-            ))}
-          </ul>
+          <>
+            <ul>
+              {carrinho.map((item) => (
+                ItemCarrinho({ item, removerDoCarrinho, alterarQuantidade })
+              ))}
+            </ul>
+            <div className="cart-total">
+              <h3>Total</h3>
+              <p>R$ {calcularTotal(carrinho).toFixed(2)}</p>
+            </div>
+          </>
         )}
-      </div>
-      <div className="cart-total">
-        <h3>Total</h3>
-        <p>R$ {calcularTotal(carrinho).toFixed(2)}</p>
+        <div className="cart-finalizar-compra">
+          <button
+            className="btn"
+            onClick={handleFinalizarCompra}>Finalizar Compra</button>
+        </div>
       </div>
     </aside>
   );

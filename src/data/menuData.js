@@ -32,21 +32,21 @@ const menuData = {
     ],
     'Pizzas': [
       {
-        id: 1,
+        id: 5,
         nome: 'Pizza de Calabresa',
         descricao: 'Pizza saborosa com calabresa e queijo derretido.',
         valor: 29.99,
         imagem: '../../public/produtos/pizza.jpg'
       },
       {
-        id: 2,
+        id: 6,
         nome: 'Pizza de Calabresa',
         descricao: 'Pizza saborosa com calabresa e queijo derretido.',
         valor: 29.99,
         imagem: '../../public/produtos/pizza.jpg'
       },
       {
-        id: 3,
+        id: 7,
         nome: 'Pizza de Calabresa',
         descricao: 'Pizza saborosa com calabresa e queijo derretido.',
         valor: 29.99,
@@ -56,21 +56,21 @@ const menuData = {
     ],
     'Bebidas': [
       {
-        id: 1,
+        id: 8,
         nome: 'Refrigerante Coca-Cola',
         descricao: 'Lata de Coca-Cola gelada.',
         valor: 4.5,
         imagem: '../../public/produtos/coca.jpg'
       },
       {
-        id: 2,
+        id: 9,
         nome: 'Refrigerante Coca-Cola',
         descricao: 'Lata de Coca-Cola gelada.',
         valor: 4.5,
         imagem: '../../public/produtos/coca.jpg'
       },
       {
-        id: 3,
+        id: 10,
         nome: 'Refrigerante Coca-Cola',
         descricao: 'Lata de Coca-Cola gelada.',
         valor: 4.5,
@@ -79,21 +79,21 @@ const menuData = {
     ],
     'Sobremesas': [
       {
-        id: 1,
+        id: 11,
         nome: 'Pudim de Leite',
         descricao: 'Delicioso pudim de leite.',
         valor: 8.99,
         imagem: '../../public/produtos/pudim.jpg'
       },
       {
-        id: 2,
+        id: 12,
         nome: 'Pudim de Leite',
         descricao: 'Delicioso pudim de leite.',
         valor: 8.99,
         imagem: '../../public/produtos/pudim.jpg'
       },
       {
-        id: 3,
+        id: 13,
         nome: 'Pudim de Leite',
         descricao: 'Delicioso pudim de leite.',
         valor: 8.99,

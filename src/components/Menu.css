@@ -74,3 +74,7 @@
 .card button:hover {
   background-color: #0056b3;
 }
+
+.card button:active {
+  background-color: #003366; /* Defina a cor desejada para quando o botão for clicado */
+}

@@ -4,7 +4,17 @@ import { mdiCart } from '@mdi/js';
 import logo from '../../public/logo/logo4.png';
 import './Header.css';
 
-const Header = ({carrinhoItens, mostrarOuEsconderCarrinho}) => {
+const Header = ({ mostrarOuEsconderCarrinho, carrinho}) => {
+
+  const calcularItensNoCarrinho = (carrinhoItens) => {
+    var total = 0;
+    for (let i = 0; i < carrinhoItens.length; i++) {
+      total += carrinhoItens[i].quantidade;
+      console.log("valor individual",carrinhoItens[i].quantidade);
+    }
+    console.log(total);
+    return total;
+  }
 
   return (
     <header className="header">
@@ -20,7 +30,7 @@ const Header = ({carrinhoItens, mostrarOuEsconderCarrinho}) => {
           onClick={() => {mostrarOuEsconderCarrinho()}}>
             <Icon path={mdiCart} size={1} />
         </button>
-        <span className="cart-count">{carrinhoItens}</span>
+        <span className="cart-count">{calcularItensNoCarrinho(carrinho)}</span>
       </div>
     </header>
   );

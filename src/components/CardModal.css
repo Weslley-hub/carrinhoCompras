@@ -2,7 +2,6 @@
   position: fixed;
   right: 0;
   height: 100%;
-  width: 300px; 
   background-color: #fff;
   border-left: 1px solid #ccc;
   border-radius: 10px;
@@ -12,7 +11,7 @@
   transition: transform 0.3s ease-in-out
 }
 
-@media (max-width: 768px) {
+@media (max-width: 100px) {
   .cart-sidebar {
     width: 30vw;
     max-width: 50px; 
@@ -43,9 +42,34 @@
   align-items: center;
 }
 
+.item-controls{
+  display: flex;
+  align-items: center;
+}
+
+.item-quantity {
+  display: flex;
+  margin-right: 10px;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  width: auto;
+  height: auto;
+
+}
+
+.item-quantity button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 0.6em;
+}
+
 .item-controls button {
-  background-color: #c23118;
-  color: #fff;
+  background-color: transparent;
+  color: #fb0000;
   border: none;
   padding: 5px 10px;
   margin-left: 5px;
@@ -65,4 +89,59 @@
 .cart-total p {
   font-weight: bold;
   font-size: 1.2em;
+}
+
+.cart-finalizar-compra{
+  display: flex;
+  justify-content: center;
+}
+
+
+.btn {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.btn:active {
+  background-color: #003366; /* Defina a cor desejada para quando o botão for clicado */
+}
+
+
+
+.message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 24px;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.esconderMensagem {
+  animation: none;
 }
